@@ -12,7 +12,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Advent+Pro:wght@100&display=swap" rel="stylesheet">
-  
+    <script src="https://smtpjs.com/v3/smtp.js">
+    </script>
     <link rel="stylesheet" href="./css/Style.css">
   
   </head>
@@ -306,6 +307,7 @@
       </div>
 
     <hr>
+    <form method="post">
       <div class="container mt-5">
         <div class="row justify-content-center">
       
@@ -321,21 +323,39 @@
   <div class="card-body">
     <div class="mb-3">
       <label for="exampleFormControlInput1" class="form-label">Email address</label>
-      <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+      <input type="email" class="form-control" name="contactemail" id="contactemail" placeholder="name@example.com">
     </div>
     <div class="mb-3">
       <label for="exampleFormControlTextarea1" class="form-label">Message</label>
-      <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+      <textarea class="form-control"  name="contactmessage" id="contactmessage" rows="3"></textarea>
     </div>
-    <button type="button" class="btn btn-primary btn-sm">Send Message</button>
+    <input type="button" value="Send Message"
+    onclick="sendEmail()"  type="button"   class="btn btn-primary btn-sm">
   </div>
 </div>
           </div>
         </div>
       </div>
+    </form>
+   
          
         
-   
+   <script type="text/javascript">
+
+ function sendEmail() {
+Email.send({
+    Host : "smtp.gmail.com",
+    Username : "nkondethabani@gmail.com",
+    Password : "vidfxkmjvymwwnmp",
+    To : "nkondethabani@gmail.com",
+    From : "nkondethabani@gmail.com",
+    Subject : contactemail.value,
+    Body : contactmessage.value
+}).then(
+  message => alert(message)
+);}
+
+   </script>
 
     <!-- Optional JavaScript; choose one of the two! -->
 
