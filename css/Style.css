@@ -1,0 +1,33 @@
+body{
+    font-family: Gudea;
+   
+}
+button{
+font-family: 'Helvetica', 'Arial', sans-serif;
+  background-color:#ff0081;
+  color:  #fff;
+  border-radius: 4px;
+  transition: transform ease-in 0.1s, box-shadow ease-in 0.25s;
+  box-shadow: 0 2px 25px rgba(100, 84, 93, 0.5);
+  }
+img{
+    border-radius: 25px;
+}
+.card{
+    border-radius: 25px;
+}
+
+h4{
+    display: inline;
+    border-bottom: 3px solid #800080;
+    margin-bottom: 20px;
+    display: inline-block;
+    align-items: center;
+    justify-content: center;
+}
+.profile{
+    margin-left: auto;
+    margin-right: auto;
+    width: 8em;
+    
+}
